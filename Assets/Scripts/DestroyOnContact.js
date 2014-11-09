@@ -16,6 +16,9 @@ function OnTriggerEnter(other: Collider) {
     if(other.tag == "Boundary") {
     	return;
     }
+    if(other.tag == "Player") {
+    	gameController.GameOver();
+    }
     gameController.addScore(scoreValue);
     Destroy(other.gameObject);
 	

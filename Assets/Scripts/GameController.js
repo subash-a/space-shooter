@@ -9,6 +9,10 @@ var startWait: float;//Wait for these many seconds before starting the asteriod 
 var loopCount: int;
 var scoreText: GUIText;
 var score: int;
+var gameOver = false;
+var restart = false;
+var restartText: GUIText;
+var gameOverText: GUIText;
 
 function SpawnWaves() {
 	yield WaitForSeconds(startWait);
@@ -20,6 +24,11 @@ function SpawnWaves() {
 			yield WaitForSeconds(spawnWait);
 		}
 		yield WaitForSeconds(waveWait);
+		if(gameOver){
+			restart = true;
+			restartText.text = "Press 'R' to restart";
+			break;
+		}
 	};
 }
 
@@ -32,8 +41,22 @@ function updateScore() {
 	scoreText.text = "Score: " + score;
 }
 
+function GameOver() {
+	gameOverText.text = "Game Over!";
+	gameOver = true;
+}
 function Start() {
 	score = 0;
+	gameOverText.text = "";
+	restartText.text = "";
 	updateScore();
 	SpawnWaves();
+}
+
+function Update() {
+	if(restart) {
+		if(Input.GetKeyDown(KeyCode.R)) {
+			Application.LoadLevel(Application.loadedLevel);
+		}
+	}
 }
