@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameController.js">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\stealth\Assets\Scripts\Tags.js">
     <Files>
-      <File FileName="Assets\Scripts\GameController.js" Line="28" Column="16" />
-      <File FileName="Assets\Scripts\DestroyOnContact.js" Line="19" Column="41" />
+      <File FileName="..\stealth\Assets\Scripts\Tags.js" Line="9" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
